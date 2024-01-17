@@ -41,8 +41,8 @@
         </StackLayout>
         <Image Grid.Row="2" x:Name="ImgWeatherIcon" 
                VerticalOptions="Start"
-               HeightRequest="300"
-               WidthRequest="300"/>
+               HeightRequest="200"
+               WidthRequest="200"/>
         <Grid Grid.Row="3" 
               RowDefinitions="Auto,Auto" 
               ColumnDefinitions="0.33*,0.33*,0.33*" 
@@ -72,31 +72,36 @@
                    Grid.Row="1" 
                    Grid.Column="2"
                    HorizontalOptions="Center"/>
-            <CollectionView Grid.Row="4" x:Name="CvWeather" HeightRequest="100">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid RowDefinitions="Auto,Auto,Auto">
-                            <Image Grid.Row="0"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Start"
-                       HeightRequest="50" 
-                       WidthRequest="50"
-                       Source="{Binding weather[0].customIcon}"/>
-                            <Label Grid.Row="1"
-                       FontSize="Large"
-                       HorizontalOptions="Center" 
-                       Text="{Binding main.temperature}"/>
-                            <Label Grid.Row="3"
-                       FontSize="Small"
-                       HorizontalOptions="Center" 
-                       Text="{Binding dateTime}"/>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <!-- Diğer Grid öğeleri burada -->
+
+            <!-- Diğer Grid öğeleri burada -->
+
+            <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="30">
+                <!-- Diğer Grid öğeleri burada -->
+
+                <CollectionView x:Name="CvWeather" HeightRequest="100" HorizontalOptions="Center">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowDefinitions="Auto,Auto,Auto">
+                                <Image Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="50" WidthRequest="50" Source="{Binding weather[0].customIcon}"/>
+                                <Label Grid.Row="1" FontSize="Large" HorizontalOptions="Center" Text="{Binding main.temperature}"/>
+                                <Label Grid.Row="2" FontSize="Small" HorizontalOptions="Center" Text="{Binding dateTime}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Diğer Grid öğeleri burada -->
+            </Grid>
+
+
+            <!-- Diğer Grid öğeleri burada -->
+
+
+            <!-- Diğer Grid öğeleri burada -->
 
 
 
